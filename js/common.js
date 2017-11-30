@@ -48,7 +48,7 @@ $(function(){
 
 	media.on('ended abort error pause', function(){
 		$(this).fadeOut("slow", function(){
-			$(this).remove();
+			videoBlock.remove();
 		});
 	});
 
