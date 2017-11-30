@@ -43,10 +43,19 @@ $(window).load(function() {
 
 $(function(){
 	var media = $('#video');
+	var videoBlock = $('.video_block');
+	//var link = $('.stop');
 
-	media.on('ended', function(){
-		$(this).fadeOut();
+	media.on('ended abort error pause', function(){
+		$(this).fadeOut("slow", function(){
+			$(this).remove();
+		});
 	});
 
+	/*
+	link.click(function(){
+		$('#video')[0].pause();
+	})
+	*/
 
 })
