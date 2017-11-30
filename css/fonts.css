@@ -7,3 +7,10 @@
 	font-style: normal;
 	font-weight: normal;
 }
+@font-face {
+	font-family: "ProximaNovaLight";
+	src: url("../fonts/ProximaNovaLight/ProximaNova-Light.eot");
+	src: url("../fonts/ProximaNovaLight/ProximaNova-Light.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/ProximaNovaLight/ProximaNova-Light.woff") format("woff"),
+			 url("../fonts/ProximaNovaLight/ProximaNova-Light.ttf") format("truetype");
+}
