@@ -48,6 +48,7 @@ $(function(){
 	//var link = $('.stop');
 
 	$(media).on('loadedmetadata', function(){
+		videoBlock.fadeIn("slow");
 		media.play();
 	})
 
