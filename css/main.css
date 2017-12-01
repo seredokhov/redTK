@@ -65,12 +65,14 @@ body {
 header {
 	background: #ffffff;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
+	min-height: 36px;
 }
-header nav {
+nav.main_nav {
 	min-height: 36px;
 	overflow: hidden;
 	display: flex;
+	z-index: 10;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
@@ -94,12 +96,75 @@ footer .footer_nav a:hover {
 	color: #ff171f;
 	text-decoration: none;
 }
+
+.menu_link {
+	display: block;
+	float: right;
+	width: 36px;
+	height: 36px;
+	padding: 8px 3px;
+	display: none;
+	position: relative;
+	z-index: 11;
+	background: #fff;
+	border-radius: 18px;
+}
+.menu_link .hamb {
+	display: block;
+	width: 30px;
+	height: 20px;
+	position: relative;
+}
+.menu_link .hamb > span {
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #7d7d7d;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all .1s linear;
+}
+.menu_link .hamb::before,
+.menu_link .hamb::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 4px;
+	background: #7d7d7d;
+	position: absolute;
+	transition: all .1s linear;
+}
+.menu_link .hamb::before {
+	top: 0;
+}
+.menu_link .hamb::after {
+	bottom: 0;
+}
+
+/* открытое состояние кнопки */
+
+.menu_link.open .hamb > span{
+	width: 0;
+}
+.menu_link.open .hamb::before {
+	transform: rotate(45deg);
+	margin-top: 8px;
+}
+.menu_link.open .hamb::after {
+	transform: rotate(-45deg);
+	margin-bottom: 8px;
+}
 /* Основной блок */
 main {
 	background: url(../img/bg.jpg) no-repeat center 0 #ececec;
 	background-size: cover;
 	background-attachment: fixed;
 	height: 100vh;
+}
+main .container {
+	position: relative;
+	z-index: 2;
 }
 .fixed_logo {
 	position: fixed;
@@ -144,7 +209,7 @@ main {
 	font-family: 'ProximaNovaLight';
 	margin-bottom: 20px;
 }
-.main_contact_block .adress > div::after {
+.main_contact_block .adress > div.fullday::after {
 	content: "24 часа";
 	color: #ff1720;
 	font-size: 11px;
@@ -252,4 +317,17 @@ footer .social_links a.ok {
 }
 footer .social_links a.ok:hover {
 	background-position: -80px 1px;
+}
+.overlay {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.6);
+	display: none;
+	cursor: pointer;
 }

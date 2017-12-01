@@ -16,12 +16,41 @@
 	footer .copyright {
 		order: 2;
 	}
+	.row.flex {
+		display: block;
+	}
 	.fixed_logo {
 		left: 0;
+		display: none;
 	}
+	/*
 	main > .container {
 		width: 100%;
 		margin-left: 170px;
+	}*/
+	nav.main_nav {
+		position: fixed;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		display: block;
+		height: 100%;
+		background: #ececec;
+		width: 0;
+		overflow: hidden;
+		transition: all .3s linear;
+	}
+	nav.main_nav.open {
+		width: 250px;
+	}
+	nav.main_nav a {
+		display: block;
+		padding: 5px 15px;
+		font-size: 15px;
+		width: 100%;
+	}
+	.menu_link {
+		display: block;
 	}
 }
 
@@ -54,9 +83,6 @@
 		width: 100%;
 		align-items: center;
 		padding: 15px;
-	}
-	footer .footer_nav a {
-		padding: 5px;
 	}
 }
 
