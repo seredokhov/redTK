@@ -47,7 +47,7 @@ $(function(){
 	var videoBlock = $('.video_block');
 	//var link = $('.stop');
 
-	$(media).on('loadedmetadata', function(){
+	$(media).on('canplaythrough', function(){
 		videoBlock.fadeIn("slow");
 		media.play();
 	})
