@@ -40,11 +40,18 @@ $(window).load(function() {
 });
 
 // Видеозаставка
+//canplaythrough
 
 $(function(){
 	var media = $('#video');
 	var videoBlock = $('.video_block');
 	//var link = $('.stop');
+
+	media.on('canplaythrough', function(){
+		alert('Загружено');
+	})
+
+
 
 	media.on('ended abort error pause', function(){
 		$(this).fadeOut("slow", function(){
