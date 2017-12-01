@@ -49,6 +49,7 @@ $(function(){
 
 	$(media).on('canplaythrough', function(){
 		media.play();
+		alert('Завершено');
 	})
 
 
