@@ -47,7 +47,7 @@ $(function(){
 	var videoBlock = $('.video_block');
 	//var link = $('.stop');
 
-	$(media).on('canplaythrough', function(){
+	$(media).on('loadedmetadata', function(){
 		media.play();
 	})
 
