@@ -43,17 +43,17 @@ $(window).load(function() {
 //canplaythrough
 
 $(function(){
-	var media = $('#video');
+	var media = $('.video')[0];
 	var videoBlock = $('.video_block');
 	//var link = $('.stop');
 
-	media.on('canplaythrough', function(){
-		alert('Загружено');
+	$(media).on('canplaythrough', function(){
+		media.play();
 	})
 
 
 
-	media.on('ended abort error pause', function(){
+	$(media).on('ended abort error pause', function(){
 		$(this).fadeOut("slow", function(){
 			videoBlock.remove();
 		});
