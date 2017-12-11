@@ -307,6 +307,7 @@ main .container {
 .salon_block {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 50px;
 
 }
 .salon_block .salon {
@@ -326,6 +327,9 @@ main .container {
 }
 .salon_block .salon:hover img {
 	filter: grayscale(0%);
+}
+.salon_block .salon:hover .info {
+
 }
 .salon_block .salon:hover .info .link a {
 	opacity: 1;

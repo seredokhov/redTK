@@ -5,6 +5,24 @@
 	header nav a {
 		padding: 0;
 	}
+	.salon_block .salon .info {
+		flex-wrap: wrap;
+		background: rgba(0,0,0, .7);
+		padding-top: 5px;
+	}
+	.salon_block .salon .info > div {
+		width: 100%;
+	}
+	.salon .info .contacts {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		order: 1;
+	}
+	.salon .info .link a {
+		margin-bottom: 5px;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -91,6 +109,10 @@
 	}
 	.news_block .new > div {
 		width: 100%;
+	}
+	.salon_block .salon {
+		width: 100%;
+		margin-bottom: 5px;
 	}
 }
 
