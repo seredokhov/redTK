@@ -32,15 +32,8 @@ $(function() {
 	
 });
 
-$(window).load(function() {
-
-	$(".loader_inner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
-
-});
 
 // Видеозаставка
-//canplaythrough
 
 $(function(){
 	var media = $('.video')[0];
@@ -61,9 +54,6 @@ $(function(){
 	else {
 		videoBlock.remove();
 	}
-
-
-//.menu_link
 
 })
 
@@ -86,3 +76,23 @@ $(function(){
 	})
 
 })
+
+// Галлерея
+$(function() {
+	$(".inst_block .img_item").click(function(){
+		var img = $(this).find('img');
+		var src = img.attr('src');
+		$("body").append("<div class='popup'>"+
+						 "<div class='popup_bg'></div>"+
+						 "<img src='"+src+"' class='popup_img' />"+
+						 "<div class='close_popup'>╳</div>"+
+						 "</div>"); 
+		$(".popup").fadeIn(200);
+		$(".popup_bg, .close_popup").click(function(){
+			$(".popup").fadeOut(200);
+			setTimeout(function() {
+			  $(".popup").remove();
+			}, 200);
+		});
+	});
+});

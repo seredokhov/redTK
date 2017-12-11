@@ -23,11 +23,6 @@
 		left: 0;
 		display: none;
 	}
-	/*
-	main > .container {
-		width: 100%;
-		margin-left: 170px;
-	}*/
 	nav.main_nav {
 		position: fixed;
 		right: 0;
@@ -51,6 +46,13 @@
 	}
 	.menu_link {
 		display: block;
+	}
+	.main_form_block {
+		max-width: 100%;
+		margin: 20px auto;
+	}
+	.news_block {
+		margin-bottom: 30px;
 	}
 }
 
@@ -84,11 +86,39 @@
 		align-items: center;
 		padding: 15px;
 	}
+	.news_block .new {
+		flex-wrap: wrap;
+	}
+	.news_block .new > div {
+		width: 100%;
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.main_form_block {
+		padding: 40px 20px;
+	}
+	.main_form_block .send_form {
+		width: 100%;
+	}
+	.controlls {
+		height: 30px;
+		width: 80px;
+	}
+	.controlls > a {
+		height: 30px;
+		width: 30px;
+	}
+	.controlls > a.prev {
+		background-position: 6px 4px;
+	}
+	.controlls > a.next {
+		background-position: -27px 4px;
+	}
+	.controlls > a:hover {
+		background-position-y: -47px;
+	}
 }
 
 /* Custom, iPhone Retina */
