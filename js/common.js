@@ -77,7 +77,7 @@ $(function(){
 
 })
 
-// Галлерея
+// Галлерея инстаграм
 $(function() {
 	$(".inst_block .img_item").click(function(){
 		var img = $(this).find('img');
@@ -95,4 +95,45 @@ $(function() {
 			}, 200);
 		});
 	});
+});
+
+
+// Галлерея салоны
+$(function() {
+	var galery = $('.gallery');
+	var largeImg = galery.find('.large_photo').find('img');
+	var preview = galery.find('.small_photo');
+	//var smallImg = preview.find('img');
+
+	preview.on('click', function(){
+		$(this).addClass('active');
+		preview.not($(this)).removeClass('active');
+
+		var src = $(this).find('img').attr('src');
+		
+		if(src != largeImg.attr('src') ){
+			largeImg.fadeOut(100, function(){
+				largeImg.attr('src', src).fadeIn(100);
+
+			});
+		}
+
+	})
+});
+
+
+// Боковое меню
+$(function() {
+	var list = $('.aside_menu').find('.list');
+	var listLink = list.children('a');
+	var ul = list.find('.list_ul');
+
+	listLink.on('click', function(){
+		list.not($(this).parent()).removeClass('active');
+		ul.not($(this).siblings()).slideUp();
+		$(this).parent().toggleClass('active');
+		$(this).siblings('.list_ul').slideToggle();
+		return false;
+	})
+
 });

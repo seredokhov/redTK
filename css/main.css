@@ -20,7 +20,8 @@ textarea{
 	border: none;
 	outline: none;
 }
-h1 {
+h1,
+h2 {
 	font-family: 'ProximaNovaLight';
 	color: #2f2f2f;
 	font-size: 26px;
@@ -403,6 +404,373 @@ main .container {
 	color: #fff;
 	background: #ff1720;
 }
+
+
+
+
+/*Салоны внутри*/
+.salon_gallery {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 35px;
+}
+.salon_gallery > div {
+
+}
+.salon_gallery .large_photo {
+	flex-basis: 670px;
+	max-width: 670px;
+}
+.salon_gallery .large_photo img {
+	width: 100%;
+	object-fit: cover;
+}
+.salon_gallery .small_photo_block {
+	flex-basis: 285px;
+	max-width: 285px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	cursor: pointer;
+}
+.small_photo_block .small_photo {
+	width: 33.333%;
+	max-width: 95px;
+	max-height: 65px;
+	overflow: hidden;
+}
+.small_photo_block .small_photo img {
+	max-width: 100%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	transition: all .2s linear;
+	cursor: pointer;
+}
+.small_photo_block .small_photo.active img {
+	filter: grayscale(0%);
+}
+.salon_contacts {
+	font-size: 18px;
+	color: #2f2f2f;
+	font-family: 'ProximaNovaRegular';
+	margin-bottom: 25px;
+
+}
+.salon_contacts > div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.salon_contacts i {
+	display: block;
+	width: 33px;
+	height: 33px;
+	margin-right: 10px;
+	background: url(../img/sprite3.png) no-repeat;
+}
+.salon_contacts .phones a {
+	color: #2f2f2f;
+	text-decoration: none;
+}
+.salon_contacts .phones i {
+	background-position: -4px -47px;
+}
+.salon_contacts .adress i {
+	background-position: -6px -3px;
+}
+.map_block {
+	margin-bottom: 50px;
+}
+.map_block img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*Команда*/
+.team_photo_block {
+	max-width: 970px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 85px;
+
+}
+.team_photo_block .person {
+	width: 33.333%;
+	position: relative;
+	background: #323232;
+}
+.team_photo_block .person img {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all .2s linear;
+}
+.team_photo_block .person .fade {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background: rgba(0,0,0, .7);
+	transition: all .2s linear;
+	overflow: hidden;
+}
+.team_photo_block .person .fade > div {
+	padding: 20px;
+}
+.team_photo_block .person:hover img {
+	filter: blur(3px);
+}
+.team_photo_block .person:hover .spec_info {
+	display: none;
+}
+.team_photo_block .person:hover .fade {
+	height: 100%;
+}
+.person .spec_info {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 15px 20px;
+}
+.person .fade .name,
+.person .spec_info .name {
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 21px;
+	font-family: 'ProximaNovaRegular';
+	text-transform: uppercase;
+}
+.person .fade .specialization,
+.person .spec_info .specialization {
+	color: #b5b5b5;
+	font-size: 16px;
+	line-height: 17px;
+	font-family: 'ProximaNovaRegular';
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+.person .spec_info .specialization {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+.person .fade .red {
+	color: #fe242c;
+	font-size: 18px;
+	line-height: 19px;
+	font-family: 'ProximaNovaLight';
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+.person .fade p {
+	color: #ffffff;
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+.person .fade a.more {
+	display: block;
+	color: #fe242c;
+	font-size: 14px;
+	text-decoration: underline;
+	margin-bottom: 20px;
+}
+.person .fade .adress {
+	color: #ffffff;
+	font-size: 14px;
+	font-family: 'ProximaNovaLight';
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 15px;
+}
+.person .fade .adress i {
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin-right: 3px;
+	background: url(../img/sprite2.png) no-repeat;
+	background-position: 0px -2px;
+}
+
+/*О нас*/
+.about_block p {
+	text-align: justify;
+	color: #262626;
+	font-size: 16px;
+	margin: 0;
+}
+.person_block {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 30px;
+}
+.person_block .img_block {
+	max-width: 40%;
+}
+.person_block .img_block img {
+	max-width: 100%;
+}
+.person_block .descript_block {
+	max-width: 60%;
+	padding-left: 25px;
+}
+.person_block .descript_block h2 {
+	color: #2f2f2f;
+	font-size: 26px;
+	line-height: 27px;
+	font-family: 'ProximaNovaLight';
+	text-transform: uppercase;
+	margin-top: 0;
+	font-weight: normal;
+}
+.person_block .descript_block p {
+	margin-bottom: 30px;
+}
+.person_block .descript_block p:last-of-type {
+	margin-bottom: 0;
+}
+
+/*Услуги*/
+.list {
+	margin-bottom: 20px;
+}
+.list a.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: uppercase;
+	height: 42px;
+	width: 200px;
+	transition: all .2s linear;
+	color: #2f2f2f;
+	border: 1px solid #2f2f2f;
+}
+.list.active a.title {
+	color: #ff171f;
+	border-color: #ff171f;
+}
+.list a.title:hover {
+	color: #ffffff;
+	background: #ff171f;
+	border-color: #ff171f;
+}
+.list ul.list_ul {
+	list-style: none;
+	padding: 15px 0;
+	margin: 0;
+	display: none;
+}
+.list:first-child ul.list_ul {
+	display: block;
+}
+.list ul.list_ul a {
+	display: block;
+	text-decoration: none;
+	color: #2f2f2f;
+	font-size: 14px;
+	line-height: 26px;
+	padding: 7px 0;
+	padding-left: 20px;
+}
+.list ul.list_ul a:hover,
+.list ul.list_ul a.active {
+	color: #ff171f;
+}
+.services_gallery {
+	margin-bottom: 30px;
+}
+.services_gallery .large_photo {
+	margin-bottom: 20px;
+}
+.services_gallery .large_photo img {
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+}
+.services_gallery .small_photo_block {
+	display: flex;
+	flex-wrap: wrap;
+}
+.services_gallery .small_photo_block .small_photo {
+	max-width: 100px;
+	max-height: 69px;
+	cursor: pointer;
+}
+.services_gallery .small_photo_block .small_photo img {
+	width: 100%;
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: grayscale(100%);
+	cursor: pointer;
+}
+.services_gallery .small_photo_block .small_photo.active img {
+	filter: grayscale(0%);
+}
+.description p {
+	color: #262626;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: justify;
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+.description + h2 {
+	color: #262626;
+	margin: 0;
+	margin-bottom: 5px;
+}
+.price_block {
+	background: #ffffff;
+	padding: 10px 100px;
+	margin-bottom: 50px;
+}
+.price_block ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.price_block .price {
+	display: flex;
+	color: #262626;
+	font-size: 18px;
+	font-family: 'ProximaNovaLight';
+}
+.price_block .price > div {
+	width: 50%;
+	text-align: center;
+}
+.price .title {
+	margin-bottom: 30px;
+}
+.price .title::before {
+	content: "";
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	margin-right: 5px;
+	vertical-align: middle;
+	background: url('../img/sprite4.png') no-repeat;
+}
+.price .height_block .title::before {
+	background-position: 0px 1px;
+}
+.price .cost_block .title::before {
+	background-position: -50px 1px;
+}
+.price_block + .main_form_block {
+	margin-left: 50px;
+}
 /* Форма "Записаться в салон"" */
 .main_form_block {
 	max-width: 570px;
@@ -563,7 +931,7 @@ footer {
 	position: relative;
 	z-index: 2;
 }
-footer > .container {
+footer > .container > div {
 	min-height: 88px;
 	display: flex;
 	flex-wrap: wrap;

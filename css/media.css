@@ -23,6 +23,21 @@
 	.salon .info .link a {
 		margin-bottom: 5px;
 	}
+	.person .fade .name, .person .spec_info .name {
+		font-size: 15px;
+		line-height: 15px;
+	}
+	.person .fade .specialization, .person .spec_info .specialization {
+		font-size: 13px;
+		line-height: 13px;
+	}
+	.person .fade .red,
+	.person .fade .adress {
+		display: none;
+	}
+	.person .fade p {
+		font-size: 12px;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -65,13 +80,50 @@
 	.menu_link {
 		display: block;
 	}
-	.main_form_block {
+	.main_form_block,
+	.price_block + .main_form_block {
 		max-width: 100%;
 		margin: 20px auto;
 	}
 	.news_block {
 		margin-bottom: 30px;
 	}
+	.person_block {
+		flex-direction: column;
+	}
+	.person_block .img_block {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.person_block .img_block,
+	.person_block .descript_block {
+		max-width: 100%;
+		width: 100%;
+		padding: 0;
+	}
+	.list a.title {
+		width: 100%;
+	}
+	.list {
+		margin-bottom: 5px;
+	}
+	.list:first-child ul.list_ul {
+		display: none;
+	}
+	.list a.title:hover,
+	.list.active a.title:hover {
+		background: none;
+		color: #ff171f;
+		border-color: #ff171f;
+	}
+	.list.active a.title {
+		color: #2f2f2f;
+		border-color: #2f2f2f;	
+	}
+	.list ul.list_ul {
+		text-align: center;
+	}
+
 }
 
 /* Small Devices, Tablets */
@@ -114,8 +166,79 @@
 		width: 100%;
 		margin-bottom: 5px;
 	}
+	.team_photo_block .person {
+		width: 50%;
+	}
+	.person .fade .name, .person .spec_info .name {
+		font-size: 20px;
+		line-height: 21px;
+	}
+	.person .fade .specialization, .person .spec_info .specialization {
+		font-size: 17px;
+		line-height: 17px;
+	}
+	.person .fade .red {
+		display: block;
+	}
+	.person .fade .adress {
+		display: flex;
+	}
+	.person .fade p {
+		font-size: 14px;
+	}
+	.price_block {
+		padding: 10px 50px;
+	}
 }
-
+@media only screen and (max-width : 670px) {
+	.salon_gallery {
+		flex-wrap: wrap;
+	}
+	.salon_gallery .large_photo {
+		margin-bottom: 15px;
+	}
+	.salon_gallery .small_photo_block {
+		flex-basis: auto;
+		max-width: initial;
+		width: 100%;
+	}
+	.person .fade .name, .person .spec_info .name {
+		font-size: 15px;
+		line-height: 15px;
+	}
+	.person .fade .specialization, .person .spec_info .specialization {
+		font-size: 13px;
+		line-height: 13px;
+	}
+	.person .fade .red,
+	.person .fade .adress {
+		display: none;
+	}
+	.person .fade p {
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width : 500px){
+	.team_photo_block {
+		justify-content: center;
+	}
+	.team_photo_block .person {
+		width: 100%;
+		max-width: 300px;
+		margin-bottom: 10px;
+	}
+	.person .fade .name, .person .spec_info .name {
+		font-size: 20px;
+		line-height: 21px;
+	}
+	.person .fade .specialization, .person .spec_info .specialization {
+		font-size: 17px;
+		line-height: 17px;
+	}
+	.person .fade p {
+		font-size: 14px;
+	}
+}
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	.main_form_block {
@@ -140,6 +263,16 @@
 	}
 	.controlls > a:hover {
 		background-position-y: -47px;
+	}
+	.salon_contacts {
+		font-size: 14px;
+	}
+	.main_form_block .title_form,
+	h1 {
+		font-size: 20px;
+	}
+	.price_block {
+		padding: 10px;
 	}
 }
 
