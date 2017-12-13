@@ -404,10 +404,6 @@ main .container {
 	color: #fff;
 	background: #ff1720;
 }
-
-
-
-
 /*Салоны внутри*/
 .salon_gallery {
 	display: flex;
@@ -635,6 +631,9 @@ main .container {
 }
 
 /*Услуги*/
+.aside_menu {
+	max-width: 220px;
+}
 .list {
 	margin-bottom: 20px;
 }
@@ -648,7 +647,6 @@ main .container {
 	line-height: 16px;
 	text-transform: uppercase;
 	height: 42px;
-	width: 200px;
 	transition: all .2s linear;
 	color: #2f2f2f;
 	border: 1px solid #2f2f2f;
@@ -659,8 +657,8 @@ main .container {
 }
 .list a.title:hover {
 	color: #ffffff;
-	background: #ff171f;
 	border-color: #ff171f;
+	background: #ff171f;
 }
 .list ul.list_ul {
 	list-style: none;
@@ -844,12 +842,167 @@ main .container {
 	background-color: #ff1720;
 	color: #fff;
 }
+/* Прайс */
+.place_block {
+	display: flex;
+	border-bottom: 1px solid #ff1720;
+}
+.place_block .adress {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-family: 'ProximaNovaLight';
+	color: #2f2f2f;
+	margin-right: 40px;
+	margin-bottom: 15px;
+}
+.place_block .adress i {
+	display: block;
+	width: 20px;
+	height: 25px;
+	margin-right: 5px;
+	background: url(../img/icon.png) no-repeat;
+	background-position: 0px 0px;
+}
+.price_controls {
+	display: flex;
+	flex-direction: row-reverse;
+	padding: 30px 0;
+}
+.price_team {
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+.price_team + .clearfix {
+	border-bottom: 1px solid #ff1720;
+}
+.catalog_drop {
+	position: relative;
+	float: left;
+}
+.catalog_drop > a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: #2f2f2f;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: 'ProximaNovaRegular';
+	padding: 8px 0;
+}
+.catalog_drop > a::after {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	width: 10px;
+	height: 5px;
+	margin-left: 16px;
+	background: url('../img/cart.png') no-repeat;
+	background-position: 0px 0px;
+	transform: rotate(180deg);
+	transition: all .2s linear;
+}
+.catalog_drop ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 430px;
+	display: none;
+	background: #e9e9e9;
+	padding: 15px;
+}
+.catalog_drop ul a {
+	display: block;
+	width: 100%;
+	color: #2f2f2f;
+	font-family: 'ProximaNovaRegular';
+	font-weight: bold;
+	text-decoration: none;
+	padding: 3px 0;
+}
+.catalog_drop ul a::before {
+	content: ".";
+	margin-right: 5px;
+}
+.catalog_drop ul a:hover {
+	color: #ff1720;
+}
+.catalog_drop:hover ul {
+	display: block;
+}
+.catalog_drop:hover a::after {
+	transform: rotate(0deg);
+}
+.header_price {
+	color: #2f2f2f;
+	font-size: 26px;
+	text-transform: uppercase;
+	font-family: 'ProximaNovaLight';
+	margin: 30px 0;
+}
+.header_price::before {
+	content: "";
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	margin-right: 5px;
+	vertical-align: middle;
+	background: url(../img/sprite4.png) no-repeat;
+	background-position: 0px 1px;
+}
 
-
-
-
-
-
+.table {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+.tr {
+	display: table-row;
+	height: 48px;
+}
+.thead {
+	display: table-header-group;
+}
+.tbody {
+	display: table-row-group;
+}
+.td,
+.th {
+	display: table-cell;
+	width: 13%;
+	color: #2f2f2f;
+	font-size: 16px;
+	font-family: 'ProximaNovaLight';
+}
+.caption {
+	display: table-caption;
+}
+.thead .tr {
+	border-bottom: 1px solid #cdcdcd;
+	height: 30px;
+}
+.thead .td {
+	color: #828282;
+}
+.title_td {
+	width: 48%;
+	font-size: 18px;
+	color: #2f2f2f;
+	font-family: 'ProximaNovaRegular';
+	font-weight: bold;
+}
+.title_td > span {
+	display: block;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+}
 
 /* Блок видео */
 .video_block {

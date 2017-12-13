@@ -137,3 +137,12 @@ $(function() {
 	})
 
 });
+
+// Блок ссылки
+$(function() {
+	var link = $('.drop_link');
+
+	link.on('click', function(){
+		return false;
+	})
+});

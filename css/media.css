@@ -38,6 +38,12 @@
 	.person .fade p {
 		font-size: 12px;
 	}
+	.td,
+	.th,
+	.tr,
+	.thead .tr {
+		width: auto;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -101,8 +107,10 @@
 		width: 100%;
 		padding: 0;
 	}
-	.list a.title {
+	.list a.title,
+	.aside_menu {
 		width: 100%;
+		max-width: 100%;
 	}
 	.list {
 		margin-bottom: 5px;
@@ -189,6 +197,10 @@
 	.price_block {
 		padding: 10px 50px;
 	}
+	.place_block {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 }
 @media only screen and (max-width : 670px) {
 	.salon_gallery {
@@ -217,6 +229,18 @@
 	.person .fade p {
 		font-size: 12px;
 	}
+	.tr,
+	.thead .tr {
+		height: auto;
+	}
+	.tr,
+	.td {
+		display: block;
+	}
+	.tr {
+		padding: 0 40px;
+	}
+
 }
 @media only screen and (max-width : 500px){
 	.team_photo_block {
@@ -237,6 +261,9 @@
 	}
 	.person .fade p {
 		font-size: 14px;
+	}
+	.catalog_drop ul {
+		width: 300px;
 	}
 }
 /* Extra Small Devices, Phones */
@@ -276,10 +303,6 @@
 	}
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-
-}
 
 
 /*==========  Mobile First Method  ==========*/
@@ -306,5 +329,10 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-
+	.price_team {
+		justify-content: space-between;
+	}
+	.price_team .person {
+		width: 320px;
+	}
 }
