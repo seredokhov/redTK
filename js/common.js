@@ -143,6 +143,8 @@ $(function() {
 	var link = $('.drop_link');
 
 	link.on('click', function(){
+		$(this).parent('.catalog_drop').toggleClass('open');
+		$(this).siblings('.drop_ul').slideToggle(50);
 		return false;
 	})
 });

@@ -933,10 +933,7 @@ main .container {
 .catalog_drop ul a:hover {
 	color: #ff1720;
 }
-.catalog_drop:hover ul {
-	display: block;
-}
-.catalog_drop:hover a::after {
+.catalog_drop.open a::after {
 	transform: rotate(0deg);
 }
 .header_price {
