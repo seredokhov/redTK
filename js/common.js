@@ -53,7 +53,7 @@ $(function(){
 		}
 
 		if($(document).width() > 1200) {
-			media.on('readyStateChange', function() {
+			$(media).on('readyStateChange', function() {
 				if (media.readyState === 0) {
 					$(media).on('canplaythrough ', start);
 				}
