@@ -56,8 +56,8 @@ $(function(){
 			$(media).on('canplaythrough ', start);
 			$(media).on('ended abort error pause', end);
 			$(media).on('loadeddata', function() {
-				if (media.readyState === 0) {
-					console.log(media.readyState);
+				console.log(media.readyState);
+				if (media.readyState === 0) {					
 					videoBlock.fadeIn("slow");
 					media.play();
 				}
