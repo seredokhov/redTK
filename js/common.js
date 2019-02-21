@@ -41,7 +41,6 @@ $(function(){
 		var videoBlock = $('.video_block');
 
 		console.log(media.readyState);
-		console.log(media);
 
 		function start(){
 			videoBlock.fadeIn("slow");
@@ -52,14 +51,12 @@ $(function(){
 				videoBlock.remove();
 			});
 		}
-
-		if($(document).width() > 1200) {
-			$(media).on('canplaythrough ', start);
-			$(media).on('ended abort error pause', end);
-			media.onreadyStateChange = function() {
-				cnsole.log('ddddd');
+		$(media).on('load', function() {
+			if($(document).width() > 1200) {
+				$(media).on('canplaythrough ', start);
+				$(media).on('ended abort error pause', end);
 			}
-		}
+		});
 	});
 });
 
