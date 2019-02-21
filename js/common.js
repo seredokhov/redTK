@@ -35,29 +35,57 @@ $(function() {
 
 // Видеозаставка
 
+// $(function(){
+// 	$(window).on('load', function() {
+// 		var media = $('.video')[0];
+// 		var videoBlock = $('.video_block');
+// 		//var link = $('.stop');
+
+// 		if($(document).width() > 1200) {
+// 			$(media).on('canplaythrough', function(){
+// 				videoBlock.fadeIn("slow");
+// 				media.play();
+// 			})
+// 			$(media).on('ended abort error pause', function(){
+// 				$(this).fadeOut("slow", function(){
+// 					videoBlock.remove();
+// 				});
+// 			});
+// 		}
+// 		else {
+// 			videoBlock.remove();
+// 		}	
+// 	});
+// })
 $(function(){
 	$(window).on('load', function() {
 		var media = $('.video')[0];
 		var videoBlock = $('.video_block');
 		//var link = $('.stop');
 
-		if($(document).width() > 1200) {
-			$(media).on('canplaythrough', function(){
-				videoBlock.fadeIn("slow");
-				media.play();
-			})
-			$(media).on('ended abort error pause', function(){
-				$(this).fadeOut("slow", function(){
-					videoBlock.remove();
-				});
+		function start(){
+			videoBlock.fadeIn("slow");
+			media.play();
+		}
+		function end(){
+			$(this).fadeOut("slow", function(){
+				videoBlock.remove();
 			});
+		}
+
+		if($(document).width() > 1200) {
+
+			$(media).on('canplaythrough', start);
+			$(media).on('ended abort error pause', end);
+			if (media.readyState > 3) {
+			  start();
+			}
 		}
 		else {
 			videoBlock.remove();
-		}	
+		}
 	});
-})
-
+});
 
 // Мобильное меню
 
