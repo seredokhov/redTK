@@ -39,7 +39,7 @@ $(function(){
 	$(window).on('load', function() {
 		var media = $('.video')[0];
 		var videoBlock = $('.video_block');
-		//var link = $('.stop');
+
 		console.log(media.readyState);
 
 		function start(){
@@ -53,12 +53,14 @@ $(function(){
 		}
 
 		if($(document).width() > 1200) {
+			$(media).on('canplaythrough ', start);
+			$(media).on('ended abort error pause', end);
 			$(media).on('readyStateChange', function() {
 				if (media.readyState === 0) {
-					$(media).on('canplaythrough ', start);
+					console.log(media.readyState);
+					media.play();
 				}
-			});			
-			$(media).on('ended abort error pause', end);
+			});
 		}
 	});
 });
