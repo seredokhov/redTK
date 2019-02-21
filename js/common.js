@@ -51,12 +51,13 @@ $(function(){
 				videoBlock.remove();
 			});
 		}
-		$(media).on('load', function() {
-			if($(document).width() > 1200) {
-				$(media).on('canplaythrough ', start);
-				$(media).on('ended abort error pause', end);
+		if($(document).width() > 1200) {
+			$(media).on('canplaythrough ', start);
+			if(media.readyState >= 3) {
+				start();
 			}
-		});
+			$(media).on('ended abort error pause', end);
+		}
 	});
 });
 
