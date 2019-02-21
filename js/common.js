@@ -61,8 +61,6 @@ $(function(){
 	$(window).on('load', function() {
 		var media = $('.video')[0];
 		var videoBlock = $('.video_block');
-		//var link = $('.stop');
-		console.log(media);
 		function start(){
 			videoBlock.fadeIn("slow");
 			media.play();
