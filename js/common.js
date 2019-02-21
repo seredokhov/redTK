@@ -41,6 +41,7 @@ $(function(){
 		var videoBlock = $('.video_block');
 
 		console.log(media.readyState);
+		console.log('hh');
 
 		function start(){
 			videoBlock.fadeIn("slow");
