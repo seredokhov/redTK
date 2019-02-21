@@ -41,7 +41,6 @@ $(function(){
 		var videoBlock = $('.video_block');
 
 		console.log(media.readyState);
-		console.log('hh');
 
 		function start(){
 			videoBlock.fadeIn("slow");
@@ -56,9 +55,10 @@ $(function(){
 		if($(document).width() > 1200) {
 			$(media).on('canplaythrough ', start);
 			$(media).on('ended abort error pause', end);
-			$(media).on('readyStateChange', function() {
+			$(media).on('loadeddata', function() {
 				if (media.readyState === 0) {
 					console.log(media.readyState);
+					videoBlock.fadeIn("slow");
 					media.play();
 				}
 			});
