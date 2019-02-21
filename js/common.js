@@ -55,13 +55,9 @@ $(function(){
 		if($(document).width() > 1200) {
 			$(media).on('canplaythrough ', start);
 			$(media).on('ended abort error pause', end);
-			$(media).on('loadeddata', function() {
-				console.log(media.readyState);
-				if (media.readyState === 0) {					
-					videoBlock.fadeIn("slow");
-					media.play();
-				}
-			});
+			media.onreadyStateChange = function() {
+				cnsole.log('ddddd');
+			}
 		}
 	});
 });
