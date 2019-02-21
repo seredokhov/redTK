@@ -62,7 +62,7 @@ $(function(){
 		var media = $('.video')[0];
 		var videoBlock = $('.video_block');
 		//var link = $('.stop');
-
+		console.log(media);
 		function start(){
 			videoBlock.fadeIn("slow");
 			media.play();
@@ -74,15 +74,8 @@ $(function(){
 		}
 
 		if($(document).width() > 1200) {
-
-			$(media).on('canplaythrough', start);
+			$(media).on('canplaythrough ', start);
 			$(media).on('ended abort error pause', end);
-			if (media.readyState > 3) {
-			  start();
-			}
-		}
-		else {
-			videoBlock.remove();
 		}
 	});
 });
