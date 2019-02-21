@@ -35,32 +35,13 @@ $(function() {
 
 // Видеозаставка
 
-// $(function(){
-// 	$(window).on('load', function() {
-// 		var media = $('.video')[0];
-// 		var videoBlock = $('.video_block');
-// 		//var link = $('.stop');
-
-// 		if($(document).width() > 1200) {
-// 			$(media).on('canplaythrough', function(){
-// 				videoBlock.fadeIn("slow");
-// 				media.play();
-// 			})
-// 			$(media).on('ended abort error pause', function(){
-// 				$(this).fadeOut("slow", function(){
-// 					videoBlock.remove();
-// 				});
-// 			});
-// 		}
-// 		else {
-// 			videoBlock.remove();
-// 		}	
-// 	});
-// })
 $(function(){
 	$(window).on('load', function() {
 		var media = $('.video')[0];
 		var videoBlock = $('.video_block');
+		//var link = $('.stop');
+		console.log(media);
+		console.log(media.readyState);
 		function start(){
 			videoBlock.fadeIn("slow");
 			media.play();
